@@ -1,0 +1,169 @@
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: OpenSans, sans-serif;
+  src: url(../fonts/OpenSans-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: OpenSans, sans-serif;
+  src: url(../fonts/OpenSans-Regular.woff);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: OpenSans, sans-serif;
+  src: url(../fonts/OpenSans-Regular.woff2);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: OpenSans, sans-serif;
+  src: url(../fonts/OpenSans-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: OpenSans, sans-serif;
+  src: url(../fonts/OpenSans-Bold.woff);
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: OpenSans, sans-serif;
+  src: url(../fonts/OpenSans-Bold.woff2);
+  font-weight: 700;
+  font-style: normal;
+}
+
+.body {
+  font-family: OpenSans, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #000;
+}
+
+/*header*/
+
+.header {
+  display: flex;
+  min-width: 320px;
+  flex-wrap: wrap;
+  height: 640px;
+  background-image: url(../img/banner-mobile.jpg);
+  background-size: cover;
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  justify-content: center;
+  margin-bottom: 40px;
+  padding: 32px 16px;
+}
+
+
+
+.header::after {
+  content: "";
+  position: absolute;
+  background-color: #000;
+  opacity: 0.6;
+  z-index: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.header h1 {
+  font-family: OpenSans, sans-serif;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 36px;
+  margin-top: 43px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  z-index: 2;
+  position: relative;
+}
+
+.logo-and-menu {
+  display: flex;
+  align-items: flex-end;
+  z-index: 2;
+}
+
+.logo {
+  display: block;
+  height: 61px;
+  margin-top: auto;
+}
+
+@media (min-width: 768px) {
+  .header {
+    background-image: url(../img/banner-bg-tablet.jpg);
+    display: block;
+    position: relative;
+  }
+
+  .logo-and-menu {
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+  }
+}
+
+@media (max-width: 1199px) {
+  .menu ul {
+    display: none;
+  }
+
+  .menu_btn {
+    position: absolute;
+    top: 31px;
+    right: 16px;
+    content: "";
+    display: block;
+    width: 23px;
+    height: 3px;
+    background-color: #ffffff;
+  }
+
+  .menu_btn::after {
+    content: "";
+    display: block;
+    width: 23px;
+    height: 3px;
+    background-color: #ffffff;
+  }
+
+  .menu_btn::before {
+    content: "";
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 8px;
+    width: 23px;
+    height: 3px;
+    background-color: #ffffff;
+  }
+}
