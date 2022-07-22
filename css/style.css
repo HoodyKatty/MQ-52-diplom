@@ -63,7 +63,8 @@ body {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-  height: 640px;
+  padding-top: 226px;
+  padding-bottom: 219px;
   background-image: url(../img/banner-mobile.jpg);
   background-size: cover;
   background-color: #000;
@@ -79,7 +80,6 @@ body {
   position: absolute;
   background-color: #000;
   opacity: 0.6;
-  padding: 32px 16px;
   z-index: 0;
   left: 0;
   right: 0;
@@ -116,7 +116,7 @@ body {
   margin-top: auto;
 }
 
-.menu ul {
+.menu {
   display: none;
 }
 
@@ -152,10 +152,9 @@ body {
 @media (min-width: 768px) {
   .header {
     width: 100%;
-    max-height: 392px;
     background-image: url(../img/banner-bg-tablet.jpg);
     display: block;
-    padding: 47px 39px;
+    padding: 43px 35px 124px 35px;
     margin: auto;
     justify-content: space-between;
     align-items: center;
@@ -183,24 +182,31 @@ body {
     z-index: 2;
   }
 
+  .menu {
+    display: none;
+  }
+
   .menu_btn {
     top: 0;
   }
 }
 
-
-
 @media (min-width: 1200px) {
   .header {
     background-image: url(../img/banner-bg.jpg);
-    max-height: 450px;
+    padding: 29px 245px 145px 245px;
+  }
+
+  .logo-and-menu {
+    margin: 0;
+    padding: 0;
   }
 
   .menu_btn {
     display: none;
   }
 
-  .menu ul {
+  .menu {
     display: flex;
     list-style-type: none;
   }
@@ -239,3 +245,113 @@ body {
 }
 
 /* HEADER END */
+
+/* TRENDS */
+
+.trends-title {
+  font-size: 16px;
+  color: #0f0d0e;
+  font-weight: 700;
+  font-family: OpenSans, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.trends-title:after {
+  content: "";
+  display: block;
+  width: 66px;
+  height: 3px;
+  background-color: #b59f5b;
+  margin: 8px auto 0;
+}
+
+.trends-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.trends-list artical {
+  display: flex;
+  align-items: flex-end;
+  background-color: #eff6f1;
+  position: relative;
+  width: 100%;
+  padding: 0 16px 16px 16px;
+  margin-bottom: 3px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 0;
+}
+
+.trends-list artical::after {
+  content: "";
+  position: absolute;
+  background-color: #000;
+  opacity: 0.6;
+  z-index: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.trend-content {
+  border: 3px solid #b59f5b;
+  position: relative;
+  z-index: 2;
+}
+
+.post-tags li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.post-tags a {
+  font-family: OpenSans, sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  color: #b59f5b;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.post-tags a:hover {
+  text-decoration: underline;
+}
+
+.trend-title {
+  margin-top: 10px;
+  font-family: OpenSans, sans-serif;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.trend-title a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.trend-title a:hover {
+  color: #b59f5b;
+}
+
+.trend__garden {
+  background-image: url(../img/trend1.jpg);
+}
+
+.trend__cheese {
+  background-image: url(../img/trend2.jpg);
+}
+
+.trend__hiking {
+  background-image: url(../img/trend3.jpg);
+}
+
+.trend__lemons {
+  background-image: url(../img/trend4.jpg);
+}
