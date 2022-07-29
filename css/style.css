@@ -945,8 +945,12 @@ body {
   height: 546px;
   padding: 30px 25px;
   background-color: #ffffff;
-  margin: 0 auto;
-  z-index: 5;
+  z-index: 4;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  left: 0;
+  margin: auto;
 }
 
 .popup::before {
@@ -959,7 +963,8 @@ body {
   right: 0;
   bottom: 0;
   top: 0;
-  height: 100vh;
+  height: 100%;
+  width: 100%;
 }
 
 .form-hint {
@@ -1091,11 +1096,10 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   border: none;
-  border-radius: 24px;
   width: 27px;
   height: 27px;
   position: absolute;
-  top: 0;
+  top: -33px;
   right: 0;
   z-index: 4;
 }
