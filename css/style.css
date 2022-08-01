@@ -359,14 +359,14 @@ body {
   background-image: url(../img/trend4.jpg);
 }
 
-@media (max-width: 640px) and (orientation: landscape) {
+@media (max-width: 800px) and (orientation: landscape) {
   .trends-list artical {
     width: 49%;
     justify-content: space-between;
   }
 }
 
-@media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
+@media (min-width: 800px) and (max-width: 1199px) and (orientation: landscape) {
   .trends-list {
     flex-wrap: nowrap;
   }
@@ -961,22 +961,7 @@ body {
   background-color: #ffffff;
   z-index: 4;
   position: absolute;
-  /*top: 50px;
-  right: 0;
-  left: 0;*/
 }
-
-/*.popup::after {
-  content: "";
-  position: absolute;
-  background-color: #000;
-  opacity: 0.6;
-  z-index: 3;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-}*/
 
 .form-hint {
   font-family: OpenSans, sans-serif;
@@ -986,12 +971,7 @@ body {
 }
 
 .select-visit {
-  display: block;
-  margin-top: 30px;
-}
-
-.select-group {
-  width: 280px;
+  margin-top: 29px;
 }
 
 .select {
@@ -1000,10 +980,8 @@ body {
   line-height: 40px;
   color: #000000;
   font-weight: 400;
-  display: inline-block;
   margin-top: 8px;
-  box-sizing: border-box;
-  width: 280px;
+  width: 100%;
   height: 48px;
   padding-left: 20px;
   border: none;
@@ -1023,8 +1001,7 @@ body {
 }
 
 .distribution {
-  display: block;
-  margin-top: 30px;
+  margin-top: 25px;
 }
 
 .radio-btns {
@@ -1073,7 +1050,7 @@ body {
 }
 
 .form-themes {
-  margin-top: 30px;
+  margin-top: 25px;
 }
 
 .field-textarea {
@@ -1082,17 +1059,16 @@ body {
   color: #000000;
   font-weight: 400;
   margin-top: 8px;
-  min-width: 280px;
-  max-width: 280px;
+  min-width: 100%;
   min-height: 133px;
-  max-height: 133px;
   background-color: #f4f7f6;
   border: none;
   padding: 22px 22px;
+  resize: none;
 }
 
 .popup-btn {
-  width: 280px;
+  width: 100%;
   height: 48px;
   background-color: #b59f5b;
   border: none;
@@ -1105,16 +1081,33 @@ body {
   margin-top: 25px;
 }
 
+.popup-btn:hover {
+  background-color: #323232;
+}
+
 .popup__close {
   content: "";
   background-image: url("../svg/form-x.svg");
   background-size: contain;
   background-repeat: no-repeat;
   border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
   width: 27px;
   height: 27px;
   position: absolute;
   top: -33px;
   right: 0;
   z-index: 4;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+@media(min-width:641px) {
+  .popup {
+    width: 390px;
+    height: 596px;
+    padding: 30px 25px;
+  }
 }
