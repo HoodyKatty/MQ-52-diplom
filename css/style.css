@@ -940,20 +940,30 @@ body {
 
 /* POPUP */
 
+.popup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+
 .popup {
-  width: 333px;
+  width: 331px;
   height: 546px;
   padding: 30px 25px;
   background-color: #ffffff;
   z-index: 4;
   position: absolute;
-  top: 50px;
+  /*top: 50px;
   right: 0;
-  left: 0;
-  margin: auto;
+  left: 0;*/
 }
 
-.popup::before {
+/*.popup::after {
   content: "";
   position: absolute;
   background-color: #000;
@@ -963,9 +973,7 @@ body {
   right: 0;
   bottom: 0;
   top: 0;
-  height: 100%;
-  width: 100%;
-}
+}*/
 
 .form-hint {
   font-family: OpenSans, sans-serif;
@@ -1014,6 +1022,10 @@ body {
 .distribution {
   display: block;
   margin-top: 30px;
+}
+
+.radio-btns {
+  display: block;
 }
 
 .radio-group-text {
